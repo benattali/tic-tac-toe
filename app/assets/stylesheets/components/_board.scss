@@ -1,8 +1,83 @@
 .main-board {
     background-color: $black;
-    width: 50%;
-    padding-bottom: 50%;
+    width: 40%;
+    padding-bottom: 40%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    position: fixed;
+    border: 1px solid $gold;
+}
+
+.top-left {
+    width: 33.333333%;
+    height: 33.333333%;
+    border: 1px solid $gold;
+    position: absolute;
+}
+
+.top-center {
+    width: 33.333333%;
+    height: 33.333333%;
+    border: 1px solid $gold;
+    position: absolute;
+    left: 33.333333%;
+}
+
+.top-right {
+    width: 33.333333%;
+    height: 33.333333%;
+    border: 1px solid $gold;
+    position: absolute;
+    left: 66.666666%;
+}
+
+.mid-left {
+    width: 33.333333%;
+    height: 33.333333%;
+    border: 1px solid $gold;
+    position: absolute;
+    top: 33.333333%;
+}
+
+.mid-center {
+    width: 33.333333%;
+    height: 33.333333%;
+    border: 1px solid $gold;
+    position: absolute;
+    left: 33.333333%;
+    top: 33.333333%;
+}
+
+.mid-right {
+    width: 33.333333%;
+    height: 33.333333%;
+    border: 1px solid $gold;
+    position: absolute;
+    left: 66.666666%;
+    top: 33.333333%;
+}
+
+.bottom-left {
+    width: 33.333333%;
+    height: 33.333333%;
+    border: 1px solid $gold;
+    position: absolute;
+    top: 66.666666%;
+}
+
+.bottom-center {
+    width: 33.333333%;
+    height: 33.333333%;
+    border: 1px solid $gold;
+    position: absolute;
+    left: 33.333333%;
+    top: 66.666666%;
+}
+
+.bottom-right {
+    width: 33.333333%;
+    height: 33.333333%;
+    border: 1px solid $gold;
+    position: absolute;
+    left: 66.666666%;
+    top: 66.666666%;
 }
