@@ -16,4 +16,13 @@ const xoSelector = () => {
     });
 }
 
+const xoChecker = () => {
+   const topLeft = document.querySelector('.top-left');
+   const topCenter = document.querySelector('.top-center');
+   const topRight = document.querySelector('.top-right');
+   const midLeft = document.querySelector('.mid-left');
+   const midCenter = document.querySelector('.mid-center');
+   const midRight = document.querySelector('.mid-right');
+}
+
 export { xoSelector };
