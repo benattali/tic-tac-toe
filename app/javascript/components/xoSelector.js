@@ -1,7 +1,6 @@
 import { xoChecker } from 'components/xoChecker'
 
 const xoSelector = () => {
-  const board = document.querySelectorAll('.square');
   let oChecker = false;
 
   window.addEventListener('click', function(event) {
@@ -10,6 +9,18 @@ const xoSelector = () => {
     if ((square.id === 'top-left') || (square.id === 'top-center') || (square.id === 'top-right') || 
        (square.id === 'mid-left') || (square.id === 'mid-center') || (square.id === 'mid-right') ||
        (square.id === 'bottom-left') || (square.id === 'bottom-center') || (square.id === 'bottom-right')) {
+  
+        const board = document.querySelector('.main-board');
+        const children = board.children;
+
+        for (var i = 0; i < children.length; i++) {
+          if (children[i].innerText != '') {
+            break;
+          }
+
+          oChecker = false;
+        }
+
         if (oChecker === false) {
           square.innerText = 'X';
           oChecker = true;
@@ -21,7 +32,7 @@ const xoSelector = () => {
         }
     }
   });
-  
+
   return;
 }
 
