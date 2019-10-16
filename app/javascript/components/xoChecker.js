@@ -24,7 +24,6 @@ const xoChecker = () => {
       $.when().then(function() {
         alert("X wins");
         resetBoard();
-        return;
       });
   } else if (
     ((topLeft.innerText === 'O') && (topCenter.innerText === 'O') && (topRight.innerText === 'O')) ||
@@ -39,11 +38,8 @@ const xoChecker = () => {
       $.when().then(function() {
         alert("O wins");
         resetBoard();
-        return;
       });
   }
-  
-  return;
 }
 
 export { xoChecker };
