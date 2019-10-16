@@ -13,13 +13,13 @@ const xoSelector = () => {
         const board = document.querySelector('.main-board');
         const children = board.children;
 
-        for (var i = 0; i < children.length; i++) {
-          if (children[i].innerText != '') {
-            break;
-          }
+        // for (var i = 0; i < children.length; i++) {
+        //   if (children[i].innerText != '') {
+        //     break;
+        //   }
 
-          oChecker = false;
-        }
+        //   oChecker = false;
+        // }
 
         if (oChecker === false) {
           square.innerText = 'X';
