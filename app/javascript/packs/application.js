@@ -1,6 +1,6 @@
 import "bootstrap";
-import { xoSelector } from '../components/xoSelector'
+import { main } from '../components/main'
 import { boxHover } from '../components/boxHover'
 
-xoSelector();
-boxHover();
+main();
+// boxHover();

@@ -1,14 +1,12 @@
 import { xoChecker } from 'components/xoChecker'
 
-const xoSelector = () => {
+const main = () => {
   let oChecker = false;
 
   window.addEventListener('click', function(event) {
     const square = event.target;
 
-    if ((square.id === 'top-left') || (square.id === 'top-center') || (square.id === 'top-right') || 
-       (square.id === 'mid-left') || (square.id === 'mid-center') || (square.id === 'mid-right') ||
-       (square.id === 'bottom-left') || (square.id === 'bottom-center') || (square.id === 'bottom-right')) {
+    if (square.classList.contains('square')) {
 
         if (oChecker === false) {
           square.innerText = 'X';
@@ -23,4 +21,4 @@ const xoSelector = () => {
   });
 }
 
-export { xoSelector };
+export { main };
