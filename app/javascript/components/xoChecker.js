@@ -1,6 +1,43 @@
+import Swal from 'sweetalert2'
+
 import { resetBoard } from 'components/resetBoard'
 
 const xoChecker = () => {
+  if ( checkSquares('X') ) {
+    $.when().then(function() {
+      Swal.fire({
+        type: 'success',
+        title: 'X wins!',
+        confirmButtonText: 'Cool'
+      })
+      resetBoard();
+    });
+  } else if ( checkSquares('O') ) {
+    $.when().then(function() {
+      Swal.fire({
+        type: 'success',
+        title: 'O wins!',
+        confirmButtonText: 'Cool'
+      })
+      resetBoard();
+    });
+  } else if (
+    ((topLeft.innerText != '') && (topCenter.innerText != '') && (topRight.innerText != '') &&
+      (midLeft.innerText != '') && (midCenter.innerText != '') && (midRight.innerText != '') &&
+      (bottomLeft.innerText != '') && (bottomCenter.innerText != '') && (bottomRight.innerText != ''))
+    ) {
+    $.when().then(function() {
+      Swal.fire({
+        type: 'info',
+        title: 'Draw...',
+        confirmButtonText: 'Uncool'
+      })
+      resetBoard();
+    });
+  }
+}
+
+const checkSquares = (letter) => {
   const topLeft = document.querySelector('#top-left');
   const topCenter = document.querySelector('#top-center');
   const topRight = document.querySelector('#top-right');
@@ -12,34 +49,18 @@ const xoChecker = () => {
   const bottomRight = document.querySelector('#bottom-right');
 
   if (
-    ((topLeft.innerText === 'X') && (topCenter.innerText === 'X') && (topRight.innerText === 'X')) ||
-    ((midLeft.innerText === 'X') && (midCenter.innerText === 'X') && (midRight.innerText === 'X')) ||
-    ((bottomLeft.innerText === 'X') && (bottomCenter.innerText === 'X') && (bottomRight.innerText === 'X')) ||
-    ((topLeft.innerText === 'X') && (midLeft.innerText === 'X') && (bottomLeft.innerText === 'X')) ||
-    ((topCenter.innerText === 'X') && (midCenter.innerText === 'X') && (bottomCenter.innerText === 'X')) ||
-    ((topRight.innerText === 'X') && (midRight.innerText === 'X') && (bottomRight.innerText === 'X')) ||
-    ((topLeft.innerText === 'X') && (midCenter.innerText === 'X') && (bottomRight.innerText === 'X')) ||
-    ((topRight.innerText === 'X') && (midCenter.innerText === 'X') && (bottomLeft.innerText === 'X'))
+    ((topLeft.innerText === letter) && (topCenter.innerText === letter) && (topRight.innerText === letter)) ||
+    ((midLeft.innerText === letter) && (midCenter.innerText === letter) && (midRight.innerText === letter)) ||
+    ((bottomLeft.innerText === letter) && (bottomCenter.innerText === letter) && (bottomRight.innerText === letter)) ||
+    ((topLeft.innerText === letter) && (midLeft.innerText === letter) && (bottomLeft.innerText === letter)) ||
+    ((topCenter.innerText === letter) && (midCenter.innerText === letter) && (bottomCenter.innerText === letter)) ||
+    ((topRight.innerText === letter) && (midRight.innerText === letter) && (bottomRight.innerText === letter)) ||
+    ((topLeft.innerText === letter) && (midCenter.innerText === letter) && (bottomRight.innerText === letter)) ||
+    ((topRight.innerText === letter) && (midCenter.innerText === letter) && (bottomLeft.innerText === letter))
     ) {
-      $.when().then(function() {
-        alert("X wins");
-        resetBoard();
-      });
-  } else if (
-    ((topLeft.innerText === 'O') && (topCenter.innerText === 'O') && (topRight.innerText === 'O')) ||
-    ((midLeft.innerText === 'O') && (midCenter.innerText === 'O') && (midRight.innerText === 'O')) ||
-    ((bottomLeft.innerText === 'O') && (bottomCenter.innerText === 'O') && (bottomRight.innerText === 'O')) ||
-    ((topLeft.innerText === 'O') && (midLeft.innerText === 'O') && (bottomLeft.innerText === 'O')) ||
-    ((topCenter.innerText === 'O') && (midCenter.innerText === 'O') && (bottomCenter.innerText === 'O')) ||
-    ((topRight.innerText === 'O') && (midRight.innerText === 'O') && (bottomRight.innerText === 'O')) ||
-    ((topLeft.innerText === 'O') && (midCenter.innerText === 'O') && (bottomRight.innerText === 'O')) ||
-    ((topRight.innerText === 'O') && (midCenter.innerText === 'O') && (bottomLeft.innerText === 'O'))
-    ) {
-      $.when().then(function() {
-        alert("O wins");
-        resetBoard();
-      });
-  }
+        return true;
+      }
+  return false;
 }
 
 export { xoChecker };
