@@ -24,7 +24,7 @@ const xoChecker = () => {
     $.when().then(function() {
       Swal.fire({
         type: 'info',
-        title: 'Draw...',
+        title: 'Draw',
         confirmButtonText: 'Uncool'
       })
       resetBoard();
