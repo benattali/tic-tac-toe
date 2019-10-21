@@ -4,7 +4,8 @@ const main = () => {
   window.addEventListener('click', function(event) {
     const square = event.target;
 
-    if (square.classList.contains('square')) {
+
+    if (square.classList.contains('square') && (square.innerText === '')) {
 
         if (oChecker === false) {
           square.innerText = 'X';
