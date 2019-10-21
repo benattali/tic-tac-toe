@@ -4,17 +4,16 @@ const main = () => {
   window.addEventListener('click', function(event) {
     const square = event.target;
 
-
     if (square.classList.contains('square') && (square.innerText === '')) {
 
-        if (oChecker === false) {
+        if (oChecker === false){
           square.innerText = 'X';
           oChecker = true;
-          xoChecker();
+          test = xoChecker();
         } else {
           square.innerText = 'O';
           oChecker = false;
-          xoChecker();
+          test = xoChecker();
         }
     }
   });
