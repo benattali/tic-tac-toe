@@ -3,7 +3,7 @@
   border-top: 2px solid rgb(50,54,57);
   padding: 10px;
   position: absolute;
-  bottom: 0
+  bottom: 0;
 }
 
 .footer-item {
@@ -22,4 +22,13 @@
 
 .footer-content a:hover {
   color: #DAA520;
+}
+
+@media screen and (orientation: landscape) {
+  .footer-ben {
+    width: 100%;
+    border-top: 2px solid rgb(50,54,57);
+    padding: 10px;
+    position: static;
+  }
 }
