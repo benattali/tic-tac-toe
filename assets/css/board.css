@@ -113,10 +113,13 @@
     justify-content: center;
 }
 
+.win {
+    background-color: rgb(34,139,34) !important;
+}
+
 @media screen and (orientation: landscape) {
   .main-board {
     width: 100%;
     padding-bottom: 100%;
   }
 }
-

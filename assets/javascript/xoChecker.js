@@ -44,18 +44,47 @@ const checkSquares = (letter) => {
   const bottomCenter = document.querySelector('#bottom-center');
   const bottomRight = document.querySelector('#bottom-right');
 
-  if (
-    ((topLeft.innerText === letter) && (topCenter.innerText === letter) && (topRight.innerText === letter)) ||
-    ((midLeft.innerText === letter) && (midCenter.innerText === letter) && (midRight.innerText === letter)) ||
-    ((bottomLeft.innerText === letter) && (bottomCenter.innerText === letter) && (bottomRight.innerText === letter)) ||
-    ((topLeft.innerText === letter) && (midLeft.innerText === letter) && (bottomLeft.innerText === letter)) ||
-    ((topCenter.innerText === letter) && (midCenter.innerText === letter) && (bottomCenter.innerText === letter)) ||
-    ((topRight.innerText === letter) && (midRight.innerText === letter) && (bottomRight.innerText === letter)) ||
-    ((topLeft.innerText === letter) && (midCenter.innerText === letter) && (bottomRight.innerText === letter)) ||
-    ((topRight.innerText === letter) && (midCenter.innerText === letter) && (bottomLeft.innerText === letter))
-    ) {
-        return true;
-      }
+  if ((topLeft.innerText === letter) && (topCenter.innerText === letter) && (topRight.innerText === letter)) {
+      topLeft.classList.add('.win');
+      topCenter.classList.add('.win');
+      topRight.classList.add('.win');
+      return true;
+  } else if ((midLeft.innerText === letter) && (midCenter.innerText === letter) && (midRight.innerText === letter)) {
+      midLeft.classList.add('.win');
+      midCenter.classList.add('.win');
+      midRight.classList.add('.win');
+      return true;
+  } else if ((bottomLeft.innerText === letter) && (bottomCenter.innerText === letter) && (bottomRight.innerText === letter)) {
+      bottomLeft.classList.add('.win');
+      bottomCenter.classList.add('.win');
+      bottomRight.classList.add('.win');
+      return true;
+  } else if ((topLeft.innerText === letter) && (midLeft.innerText === letter) && (bottomLeft.innerText === letter)) {
+      topLeft.classList.add('.win');
+      midLeft.classList.add('.win');
+      bottomLeft.classList.add('.win');
+      return true;
+  } else if ((topCenter.innerText === letter) && (midCenter.innerText === letter) && (bottomCenter.innerText === letter)) {
+      topCenter.classList.add('.win');
+      midCenter.classList.add('.win');
+      bottomCenter.classList.add('.win');
+      return true;
+  } else if ((topRight.innerText === letter) && (midRight.innerText === letter) && (bottomRight.innerText === letter)) {
+      topRight.classList.add('.win');
+      midRight.classList.add('.win');
+      bottomRight.classList.add('.win');
+      return true;
+  } else if ((topLeft.innerText === letter) && (midCenter.innerText === letter) && (bottomRight.innerText === letter)) {
+      topLeft.classList.add('.win');
+      midCenter.classList.add('.win');
+      bottomRight.classList.add('.win');
+      return true;
+  } else if ((topRight.innerText === letter) && (midCenter.innerText === letter) && (bottomLeft.innerText === letter)) {
+      topRight.classList.add('.win');
+      midCenter.classList.add('.win');
+      bottomLeft.classList.add('.win');
+      return true;
+  }
   return false;
 }
 
