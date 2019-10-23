@@ -2,33 +2,27 @@
 const xoChecker = () => {
   if ( checkSquares('X') ) {
     // Popup alert after displaying character
-    $.when().then(function() {
       // Sweet alerts popup
       Swal.fire({
         type: 'success',
         title: 'X wins!',
         confirmButtonText: 'Cool'
       })
-      resetBoard();
-    });
+      // resetBoard();
   } else if ( checkSquares('O') ) {
-    $.when().then(function() {
       Swal.fire({
         type: 'success',
         title: 'O wins!',
         confirmButtonText: 'Cool'
       })
-      resetBoard();
-    });
+      // resetBoard();
   } else if ( checkDraw() ) {
-    $.when().then(function() {
       Swal.fire({
         type: 'info',
         title: 'Draw',
         confirmButtonText: 'Uncool'
       })
-      resetBoard();
-    });
+      // resetBoard();
   }
 }
 
@@ -45,44 +39,44 @@ const checkSquares = (letter) => {
   const bottomRight = document.querySelector('#bottom-right');
 
   if ((topLeft.innerText === letter) && (topCenter.innerText === letter) && (topRight.innerText === letter)) {
-      topLeft.classList.add('.win');
-      topCenter.classList.add('.win');
-      topRight.classList.add('.win');
+      topLeft.classList.add('win');
+      topCenter.classList.add('win');
+      topRight.classList.add('win');
       return true;
   } else if ((midLeft.innerText === letter) && (midCenter.innerText === letter) && (midRight.innerText === letter)) {
-      midLeft.classList.add('.win');
-      midCenter.classList.add('.win');
-      midRight.classList.add('.win');
+      midLeft.classList.add('win');
+      midCenter.classList.add('win');
+      midRight.classList.add('win');
       return true;
   } else if ((bottomLeft.innerText === letter) && (bottomCenter.innerText === letter) && (bottomRight.innerText === letter)) {
-      bottomLeft.classList.add('.win');
-      bottomCenter.classList.add('.win');
-      bottomRight.classList.add('.win');
+      bottomLeft.classList.add('win');
+      bottomCenter.classList.add('win');
+      bottomRight.classList.add('win');
       return true;
   } else if ((topLeft.innerText === letter) && (midLeft.innerText === letter) && (bottomLeft.innerText === letter)) {
-      topLeft.classList.add('.win');
-      midLeft.classList.add('.win');
-      bottomLeft.classList.add('.win');
+      topLeft.classList.add('win');
+      midLeft.classList.add('win');
+      bottomLeft.classList.add('win');
       return true;
   } else if ((topCenter.innerText === letter) && (midCenter.innerText === letter) && (bottomCenter.innerText === letter)) {
-      topCenter.classList.add('.win');
-      midCenter.classList.add('.win');
-      bottomCenter.classList.add('.win');
+      topCenter.classList.add('win');
+      midCenter.classList.add('win');
+      bottomCenter.classList.add('win');
       return true;
   } else if ((topRight.innerText === letter) && (midRight.innerText === letter) && (bottomRight.innerText === letter)) {
-      topRight.classList.add('.win');
-      midRight.classList.add('.win');
-      bottomRight.classList.add('.win');
+      topRight.classList.add('win');
+      midRight.classList.add('win');
+      bottomRight.classList.add('win');
       return true;
   } else if ((topLeft.innerText === letter) && (midCenter.innerText === letter) && (bottomRight.innerText === letter)) {
-      topLeft.classList.add('.win');
-      midCenter.classList.add('.win');
-      bottomRight.classList.add('.win');
+      topLeft.classList.add('win');
+      midCenter.classList.add('win');
+      bottomRight.classList.add('win');
       return true;
   } else if ((topRight.innerText === letter) && (midCenter.innerText === letter) && (bottomLeft.innerText === letter)) {
-      topRight.classList.add('.win');
-      midCenter.classList.add('.win');
-      bottomLeft.classList.add('.win');
+      topRight.classList.add('win');
+      midCenter.classList.add('win');
+      bottomLeft.classList.add('win');
       return true;
   }
   return false;
