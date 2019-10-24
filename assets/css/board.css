@@ -117,6 +117,11 @@
     background-color: rgb(34,139,34) !important;
 }
 
+.square:hover {
+    background-color: rgb(75,75,75);
+    cursor: pointer;
+}
+
 @media screen and (orientation: landscape) {
   .main-board {
     width: 100%;

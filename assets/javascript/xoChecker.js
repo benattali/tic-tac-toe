@@ -8,21 +8,18 @@ const xoChecker = () => {
         title: 'X wins!',
         confirmButtonText: 'Cool'
       })
-      // resetBoard();
   } else if ( checkSquares('O') ) {
       Swal.fire({
         type: 'success',
         title: 'O wins!',
         confirmButtonText: 'Cool'
       })
-      // resetBoard();
   } else if ( checkDraw() ) {
       Swal.fire({
         type: 'info',
         title: 'Draw',
         confirmButtonText: 'Uncool'
       })
-      // resetBoard();
   }
 }
 
@@ -42,41 +39,89 @@ const checkSquares = (letter) => {
       topLeft.classList.add('win');
       topCenter.classList.add('win');
       topRight.classList.add('win');
+      midLeft.classList.remove('square');
+      midCenter.classList.remove('square');
+      midRight.classList.remove('square');
+      bottomLeft.classList.remove('square');
+      bottomCenter.classList.remove('square');
+      bottomRight.classList.remove('square');
       return true;
   } else if ((midLeft.innerText === letter) && (midCenter.innerText === letter) && (midRight.innerText === letter)) {
       midLeft.classList.add('win');
       midCenter.classList.add('win');
       midRight.classList.add('win');
+      topLeft.classList.remove('square');
+      topCenter.classList.remove('square');
+      topRight.classList.remove('square');
+      bottomLeft.classList.remove('square');
+      bottomCenter.classList.remove('square');
+      bottomRight.classList.remove('square');
       return true;
   } else if ((bottomLeft.innerText === letter) && (bottomCenter.innerText === letter) && (bottomRight.innerText === letter)) {
       bottomLeft.classList.add('win');
       bottomCenter.classList.add('win');
       bottomRight.classList.add('win');
+      topLeft.classList.remove('square');
+      topCenter.classList.remove('square');
+      topRight.classList.remove('square');
+      midLeft.classList.remove('square');
+      midCenter.classList.remove('square');
+      midRight.classList.remove('square');
       return true;
   } else if ((topLeft.innerText === letter) && (midLeft.innerText === letter) && (bottomLeft.innerText === letter)) {
       topLeft.classList.add('win');
       midLeft.classList.add('win');
       bottomLeft.classList.add('win');
+      topCenter.classList.remove('square');
+      midCenter.classList.remove('square');
+      bottomCenter.classList.remove('square');
+      topRight.classList.remove('square');
+      midRight.classList.remove('square');
+      bottomRight.classList.remove('square');
       return true;
   } else if ((topCenter.innerText === letter) && (midCenter.innerText === letter) && (bottomCenter.innerText === letter)) {
       topCenter.classList.add('win');
       midCenter.classList.add('win');
       bottomCenter.classList.add('win');
+      topLeft.classList.remove('square');
+      midLeft.classList.remove('square');
+      bottomLeft.classList.remove('square');
+      topRight.classList.remove('square');
+      midRight.classList.remove('square');
+      bottomRight.classList.remove('square');
       return true;
   } else if ((topRight.innerText === letter) && (midRight.innerText === letter) && (bottomRight.innerText === letter)) {
       topRight.classList.add('win');
       midRight.classList.add('win');
       bottomRight.classList.add('win');
+      topLeft.classList.remove('square');
+      midLeft.classList.remove('square');
+      bottomLeft.classList.remove('square');
+      topCenter.classList.remove('square');
+      midCenter.classList.remove('square');
+      bottomCenter.classList.remove('square');
       return true;
   } else if ((topLeft.innerText === letter) && (midCenter.innerText === letter) && (bottomRight.innerText === letter)) {
       topLeft.classList.add('win');
       midCenter.classList.add('win');
       bottomRight.classList.add('win');
+      topCenter.classList.remove('square');
+      topRight.classList.remove('square');
+      midLeft.classList.remove('square');
+      midRight.classList.remove('square');
+      bottomLeft.classList.remove('square');
+      bottomCenter.classList.remove('square');
       return true;
   } else if ((topRight.innerText === letter) && (midCenter.innerText === letter) && (bottomLeft.innerText === letter)) {
       topRight.classList.add('win');
       midCenter.classList.add('win');
       bottomLeft.classList.add('win');
+      topLeft.classList.remove('square');
+      topCenter.classList.remove('square');
+      midLeft.classList.remove('square');
+      midRight.classList.remove('square');
+      bottomCenter.classList.remove('square');
+      bottomRight.classList.remove('square');
       return true;
   }
   return false;

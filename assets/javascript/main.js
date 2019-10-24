@@ -27,10 +27,12 @@ const main = () => {
 
         if ((oChecker === false) || (newGame === true)) {
           square.innerText = 'X';
+          square.classList.remove('square');
           oChecker = true;
           xoChecker();
         } else {
           square.innerText = 'O';
+          square.classList.remove('square');
           oChecker = false;
           xoChecker();
         }

@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Ben Attali">
+  <meta name="description" content="This is a tic tac toe game">
+  <meta property="og:image" content="https://cdn.pixabay.com/photo/2016/10/28/11/49/tic-tac-toe-1777815_960_720.jpg">
+  <meta property="og:title" content="Tic tac toe">
+  <meta property="og:description" content="The classic tic tac toe game created by Ben Attali.">
 
   <!-- Link to my own css files -->
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
@@ -10,19 +15,14 @@
   <!-- Bootstrap css -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
-
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 
   <title>Tic Tac Toe</title>
 </head>
 <body>
   <!-- Page body -->
   <h1 class="mb-4 text-center">Tic Tac Toe</h1>
-
-  <span class="new-game">New game</span>
 
   <div class="container-board">
     <div class="main-board">
@@ -36,6 +36,10 @@
       <div id="bottom-center" class="square"></div>
       <div id="bottom-right" class="square"></div>
     </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <div class="new-game">New game</div>
   </div>
   <!-- Page body ends -->
   <br>
@@ -65,7 +69,6 @@
   <script src="assets/javascript/resetBoard.js"></script>
   <script src="assets/javascript/xoChecker.js"></script>
   <script src="assets/javascript/main.js"></script>
-  <script src="assets/javascript/boxHover.js"></script>
   <!-- Sweet alert JS -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 </body>
