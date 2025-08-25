@@ -1,1 +1,1 @@
-[Tic Tac Toe](https://benattali.com/tic-tac-toe/)
+[playable link](https://benattali.com/tic-tac-toe/)
