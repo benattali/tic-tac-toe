@@ -1,1 +1,1 @@
-[playable link](https://benattali.com/tic-tac-toe/)
+[playable link](https://benattali.github.io/tic-tac-toe)
